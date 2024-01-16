@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-const baseURL = import.meta.env.VITE_BASE_URL;
+import { baseURL } from "../helpers/baseUrl";
+
 export const useFetchItems = () => {
   return useQuery({
     queryKey: ["testData"],
