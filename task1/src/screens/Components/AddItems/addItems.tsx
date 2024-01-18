@@ -64,7 +64,7 @@ export const AddItems = ({ open, toggleOpen }: any) => {
                 values.time = [date.getHours(), date.getMinutes()];
                 postItems(values);
                 toggleOpen();
-                window.location.reload();
+                // window.location.reload();
                 // alert(JSON.stringify(values, null, 2));
                 // actions.setSubmitting(false);
               }}

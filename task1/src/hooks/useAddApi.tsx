@@ -1,10 +1,9 @@
-import { QueryClient, useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { baseURL } from "../helpers/baseUrl";
 import { FormContent } from "../screens/Components/AddItems/addItems";
 
-const queryClient = new QueryClient();
-
 export const useAddItems = () => {
+  const queryClient = useQueryClient();
   console.log("adding items");
   return useMutation({
     mutationFn: async (postData: FormContent) => {
